@@ -17,38 +17,7 @@
 </head>
 <body>
 
-<div id="head" class="jumbotron text-center">
-	<ul class="nav justify-content-end">
-	<c:if test="${userinfo eq null}">
-	    <li class="nav-item">
-	      <a class="nav-link" href="${root}/MvJoin">Sign Up</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="${root}/MvLogin">Login</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="${root}/MvNotice">공지사항</a>
-	    </li>
-	 </c:if>
-	 <c:if test="${userinfo ne null}">
-	    <li class="nav-item">
-	      <a class="nav-link" href="${root}/MvMypage">MyPage</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="${root}/logout">Logout</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="${root}/MvNotice">공지사항</a>
-	    </li>
-	 </c:if>
-	  </ul>
-
-<div id="home">
-  <h1><a href = "${root}/main.do">HAPPY HOUSE</a></h1>
-  <p><a href = "${root}/main.do">행복한 우리 집</a></p> 
-</div>
-</div>
-
+<%@ include file="/header.jsp" %>
 <div class="container">
 <br><h2>상세 조회</h2><br>
 <c:if test="${detail ne null}">
